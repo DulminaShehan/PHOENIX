@@ -1,0 +1,127 @@
+.timeline__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  position: relative;
+}
+
+.timeline__list::before {
+  content: '';
+  position: absolute;
+  top: 9px;
+  left: 6%;
+  right: 6%;
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold), var(--border) 40%, var(--border));
+}
+
+.timeline__item {
+  position: relative;
+  padding: 0 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.timeline__marker {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 24px;
+}
+
+.timeline__dot {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--border);
+}
+
+.timeline__item--active .timeline__dot {
+  border-color: var(--gold);
+  background: var(--gold);
+  box-shadow: 0 0 0 6px rgba(232, 196, 104, 0.15);
+}
+
+.timeline__card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 22px 18px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+  width: 100%;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.timeline__item--active .timeline__card {
+  border-color: rgba(232, 196, 104, 0.4);
+  background: rgba(232, 196, 104, 0.05);
+}
+
+.timeline__card:hover {
+  transform: translateY(-4px);
+}
+
+.timeline__tag {
+  font-family: var(--display);
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  color: var(--text-dim);
+}
+
+.timeline__item--active .timeline__tag {
+  color: #58e07f;
+}
+
+.timeline__title {
+  font-size: 18px;
+}
+
+.timeline__date {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.timeline__desc {
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+
+@media (max-width: 860px) {
+  .timeline__list {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .timeline__list::before {
+    top: 0;
+    bottom: 0;
+    left: 9px;
+    right: auto;
+    width: 1px;
+    height: auto;
+    background: linear-gradient(180deg, var(--gold), var(--border) 40%, var(--border));
+  }
+
+  .timeline__item {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+    padding: 0;
+  }
+
+  .timeline__marker {
+    margin-bottom: 0;
+    margin-right: 16px;
+    padding-top: 22px;
+  }
+}

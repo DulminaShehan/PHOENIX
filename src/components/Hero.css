@@ -1,0 +1,216 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 140px 0 80px;
+  background: radial-gradient(ellipse at 50% 100%, #0d0e18 0%, #050507 55%);
+}
+
+.hero__glow {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(circle at 30% 65%, rgba(43, 79, 196, 0.35), transparent 45%),
+    radial-gradient(circle at 70% 65%, rgba(181, 34, 44, 0.35), transparent 45%),
+    radial-gradient(circle at 50% 100%, rgba(232, 196, 104, 0.18), transparent 55%);
+  filter: blur(10px);
+  animation: pulse 8s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+.hero__rings {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 900px;
+  height: 900px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid rgba(232, 196, 104, 0.08);
+  box-shadow: 0 0 0 80px rgba(232, 196, 104, 0.02), 0 0 0 160px rgba(232, 196, 104, 0.015);
+  z-index: 0;
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 22px;
+}
+
+.hero__eyebrow {
+  opacity: 0.9;
+}
+
+.hero__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.hero__crest {
+  width: clamp(64px, 11vw, 128px);
+  margin-bottom: -8px;
+  filter: drop-shadow(0 0 24px rgba(232, 196, 104, 0.35));
+  opacity: 0;
+  transform: scale(0.4) translateY(20px);
+  animation: hero-crest-land 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes hero-crest-land {
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__crest {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+
+.hero__title-line {
+  font-family: var(--display);
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: clamp(13px, 1.6vw, 16px);
+  color: var(--gold);
+  font-weight: 500;
+}
+
+.hero__title-main {
+  font-family: var(--display);
+  font-size: clamp(56px, 11vw, 128px);
+  font-weight: 700;
+  line-height: 1;
+  background: linear-gradient(180deg, var(--gold-bright) 0%, var(--gold) 55%, #8a641f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 60px rgba(232, 196, 104, 0.35);
+  letter-spacing: 0.02em;
+}
+
+.hero__subtitle {
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 800;
+  color: var(--text-h);
+  letter-spacing: 0.01em;
+}
+
+.hero__tagline {
+  color: var(--text-dim);
+  font-size: 16px;
+  max-width: 420px;
+}
+
+.hero__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(120, 220, 150, 0.35);
+  background: rgba(120, 220, 150, 0.08);
+  color: #9be8ae;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #58e07f;
+  box-shadow: 0 0 0 4px rgba(88, 224, 127, 0.2);
+  animation: blink 1.6s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.hero__meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-dim);
+  font-weight: 600;
+}
+
+.hero__meta-sep {
+  color: var(--border);
+}
+
+.hero__actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero__countdown {
+  margin-top: 28px;
+}
+
+@media (max-width: 720px) {
+  .hero {
+    padding-top: 120px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero__title-main {
+    font-size: clamp(44px, 13vw, 56px);
+    letter-spacing: 0;
+  }
+
+  .hero__meta {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .hero__meta-sep {
+    display: none;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+  }
+}

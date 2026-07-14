@@ -1,0 +1,123 @@
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 22px 0;
+  transition: padding 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.site-header.is-scrolled {
+  padding: 14px 0;
+  background: rgba(5, 5, 7, 0.75);
+  backdrop-filter: blur(14px);
+  border-bottom-color: var(--border);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--display);
+  font-size: 20px;
+  letter-spacing: 0.08em;
+  color: var(--text-h);
+}
+
+.brand__mark {
+  color: var(--gold);
+  font-size: 18px;
+}
+
+.brand__text em {
+  font-style: normal;
+  color: var(--gold);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav a {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dim);
+  letter-spacing: 0.03em;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover {
+  color: var(--text-h);
+}
+
+.nav__cta {
+  padding: 10px 22px;
+  font-size: 13px;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin: -8px;
+}
+
+.nav-toggle span {
+  width: 22px;
+  height: 2px;
+  background: var(--gold);
+  display: block;
+}
+
+@media (max-width: 860px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: min(300px, 80vw);
+    background: rgba(8, 8, 12, 0.98);
+    backdrop-filter: blur(16px);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 28px;
+    padding: 32px;
+    border-left: 1px solid var(--border);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+
+  .nav--open {
+    transform: translateX(0);
+  }
+
+  .nav a {
+    font-size: 18px;
+  }
+
+  .nav__cta {
+    margin-top: 8px;
+  }
+}

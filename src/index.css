@@ -1,0 +1,142 @@
+:root {
+  --bg: #050507;
+  --bg-alt: #0b0b10;
+  --text: #d9d7e0;
+  --text-dim: #8b8894;
+  --text-h: #f6f3ea;
+  --gold: #e8c468;
+  --gold-bright: #f7dd9a;
+  --blue: #2b4fc4;
+  --blue-glow: #3d6bff;
+  --red: #b5222c;
+  --red-glow: #e0343f;
+  --border: rgba(232, 196, 104, 0.18);
+
+  --display: 'Cinzel', serif;
+  --sans: 'Manrope', system-ui, 'Segoe UI', Roboto, sans-serif;
+
+  font: 17px/1.6 var(--sans);
+  color-scheme: dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--display);
+  font-weight: 600;
+  color: var(--text-h);
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1160px, 92%);
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-family: var(--display);
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  font-size: 13px;
+  color: var(--gold);
+}
+
+.section {
+  padding: 96px 0;
+  position: relative;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.section-heading h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  margin-top: 12px;
+}
+
+.section-heading p {
+  color: var(--text-dim);
+  margin-top: 12px;
+  font-size: 16px;
+  max-width: 560px;
+  margin-inline: auto;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border-radius: 999px;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold-bright), var(--gold) 60%, #b98a2e);
+  color: #1a1204;
+  box-shadow: 0 8px 30px rgba(232, 196, 104, 0.25);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 12px 40px rgba(232, 196, 104, 0.4);
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--text-h);
+}
+
+.btn-ghost:hover {
+  border-color: var(--gold);
+  background: rgba(232, 196, 104, 0.06);
+}
+
+@media (max-width: 720px) {
+  .section {
+    padding: 64px 0;
+  }
+}

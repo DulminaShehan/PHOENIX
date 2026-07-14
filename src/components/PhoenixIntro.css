@@ -1,0 +1,64 @@
+.phoenix-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  pointer-events: none;
+  animation: phoenix-intro-bg 2.4s cubic-bezier(0.65, 0, 0.35, 1) forwards,
+    phoenix-intro-hide 2.4s steps(1, end) forwards;
+}
+
+.phoenix-intro__img {
+  width: min(58vw, 460px);
+  filter: drop-shadow(0 0 60px rgba(232, 196, 104, 0.35));
+  transform-origin: 50% 40%;
+  animation: phoenix-intro-img 2.4s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+@keyframes phoenix-intro-bg {
+  0%,
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes phoenix-intro-hide {
+  0%,
+  99% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes phoenix-intro-img {
+  0% {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  12% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  58% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.12) translateY(-40vh);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .phoenix-intro {
+    display: none;
+  }
+}
