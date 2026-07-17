@@ -1,9 +1,8 @@
 import './About.css'
 
 const STATS = [
-  { value: 'Jul 28', label: 'Registration Deadline' },
-  { value: 'Jul 30', label: 'First Round' },
-  { value: 'Aug 06', label: 'Final Round' },
+  { value: 'Aug 10', label: 'Registration Deadline' },
+  { value: 'Aug 14', label: 'Final Round' },
 ]
 
 function About() {

@@ -1,7 +1,7 @@
 import Countdown from './Countdown'
 import './Register.css'
 
-const REGISTRATION_DEADLINE = new Date('2026-07-28T23:59:59')
+const REGISTRATION_DEADLINE = new Date('2026-08-10T23:59:59')
 const REGISTER_URL = 'https://forms.gle/v9K1cGotR39KPuP56'
 
 function Register() {
@@ -11,7 +11,7 @@ function Register() {
         <p className="eyebrow">Limited Slots</p>
         <h2 className="register__title">Secure Your Spot at PHOENIX 2026</h2>
         <p className="register__desc">
-          Registrations are open now and close on <strong>July 28, 2026</strong>. Gather your team and
+          Registrations are open now and close on <strong>August 10, 2026</strong>. Gather your team and
           submit your entry before the deadline.
         </p>
 

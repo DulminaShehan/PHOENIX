@@ -17,12 +17,6 @@
   border-color: rgba(232, 196, 104, 0.35);
 }
 
-.highlight-card__icon {
-  font-size: 30px;
-  display: inline-block;
-  margin-bottom: 16px;
-}
-
 .highlight-card__title {
   font-size: 17px;
   margin-bottom: 8px;

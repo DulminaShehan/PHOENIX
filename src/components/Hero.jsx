@@ -3,7 +3,7 @@ import PhoenixIntro from './PhoenixIntro'
 import phoenixImg from '../assets/phoenix.webp'
 import './Hero.css'
 
-const REGISTRATION_DEADLINE = new Date('2026-07-28T23:59:59')
+const REGISTRATION_DEADLINE = new Date('2026-08-10T23:59:59')
 
 function Hero() {
   return (
@@ -34,7 +34,7 @@ function Hero() {
           <span className="hero__meta-sep" aria-hidden="true">
             •
           </span>
-          <span>🗓️ 30 July 2026</span>
+          <span>🗓️ 14 August 2026</span>
         </div>
 
         <div className="hero__actions">
