@@ -32,11 +32,6 @@
   color: var(--text-h);
 }
 
-.brand__mark {
-  color: var(--gold);
-  font-size: 18px;
-}
-
 .brand__text em {
   font-style: normal;
   color: var(--gold);

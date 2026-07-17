@@ -22,9 +22,6 @@ function Header() {
     <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`}>
       <div className="container site-header__inner">
         <a href="#top" className="brand">
-          <span className="brand__mark" aria-hidden="true">
-            ✦
-          </span>
           <span className="brand__text">
             PHOENIX <em>2026</em>
           </span>

@@ -5,9 +5,6 @@ function Footer() {
     <footer className="site-footer">
       <div className="container site-footer__inner">
         <div className="brand">
-          <span className="brand__mark" aria-hidden="true">
-            ✦
-          </span>
           <span className="brand__text">
             PHOENIX <em>2026</em>
           </span>

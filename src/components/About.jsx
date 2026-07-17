@@ -1,8 +1,8 @@
 import './About.css'
 
 const STATS = [
-  { value: 'Aug 10', label: 'Registration Deadline' },
-  { value: 'Aug 14', label: 'Final Round' },
+  { value: 'Aug 08', label: 'Registration Deadline' },
+  { value: 'Aug 14', label: 'Exhibition' },
 ]
 
 function About() {
@@ -17,7 +17,7 @@ function About() {
             Branch — bringing together student innovators to design, build, and showcase intelligent
             systems that rise beyond the ordinary.
           </p>
-          <p className="about__venue">📍 NIBM, Colombo 07</p>
+          <p className="about__venue">NIBM, Colombo 07</p>
         </div>
 
         <div className="about__stats">

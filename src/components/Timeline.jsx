@@ -11,13 +11,13 @@ const STAGES = [
   {
     tag: '01',
     title: 'Registration Deadline',
-    date: 'August 10, 2026',
+    date: 'August 08, 2026',
     desc: 'Last day to complete and submit your team registration.',
     state: 'upcoming',
   },
   {
     tag: '02',
-    title: 'Final Round',
+    title: 'Exhibition',
     date: 'August 14, 2026',
     desc: 'Live showcase and judging to crown the PHOENIX 2026 winners at NIBM, Colombo 07.',
     state: 'upcoming',

@@ -21,10 +21,6 @@
   gap: 8px;
 }
 
-.site-footer .brand__mark {
-  color: var(--gold);
-}
-
 .site-footer .brand__text em {
   font-style: normal;
   color: var(--gold);
